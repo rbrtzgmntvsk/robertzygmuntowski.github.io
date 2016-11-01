@@ -1,0 +1,695 @@
+body
+  background:
+    color: white
+  font-family: 'Open Sans' !important
+  position: relative
+  margin: 0
+
+::selection
+  background-color: rgba(233,42,42,0.6)
+
+
+
+a, h1, h2, h3, p, span
+  text-decoration: none
+  color: #3d3c3c
+
+h1
+  font-size: 48px
+  font-weight: 400
+
+h2
+  font-size: 30px
+  margin: 0
+  font-weight: 400
+
+h3
+  font-size: 24px
+  font-weight: 700
+
+
+a
+  font-size: 18px
+  padding: 0
+  margin: 0
+  transition: 0.3s all
+  text-transform: uppercase
+  height: 20px
+  display: inline-block
+  font-weight: 400
+  color: white
+
+  &:hover
+    color: #1ca998 !important
+
+ul
+  list-style: none
+  //display: none
+  justify-content: center
+  margin-top: 40px
+  padding: 0
+
+li
+  display: block
+  overflow: hidden !important
+  position: relative
+
+span.title
+  font-size: 36px
+  font-weight: 700
+  color: #2a4051
+  padding-bottom: 5px
+  margin: auto
+
+span.title:after
+  background-color: #1ca998
+  width: 50px
+  height: 5px
+  position: absolute
+  content: ""
+  top: 137px
+  left: 50%
+  margin-left: -25px
+
+span.title-projects
+  font-size: 36px
+  font-weight: 700
+  color: white
+  padding-bottom: 20px
+
+span.title-projects:after
+  background-color: #1ca998
+  width: 50px
+  height: 5px
+  position: absolute
+  content: ""
+  top: 67px
+  left: 50%
+  margin-left: -25px
+  z-index: 11
+
+span.title-footer
+  font-size: 36px
+  font-weight: 700
+  color: white
+  padding-bottom: 5px
+
+span.title-footer:after
+  background-color: #e97567
+  width: 50px
+  height: 5px
+  position: absolute
+  content: ""
+  top: 63px
+  left: 50%
+  margin-left: -25px
+  z-index: 11
+
+
+.section-title
+  margin: auto
+  text-align: center
+  padding-top: 70px 0
+  width: 100%
+
+.box-wrapper
+  width: 1000px
+  margin: auto
+  position: relative
+
+.content-wrapper
+  width: 1000px
+  margin: auto
+
+.title-line
+  width: 120px
+  height: 1px
+  background-color: #1ca998
+  margin: 10px 0 50px
+
+// *** BUTTON *** //
+
+.toggle
+  position: relative
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  align-items: center
+  bottom: 0
+  cursor: pointer
+  height: 38px
+  width: 40px
+  z-index: 999999
+  background: rgba(0,0,0,0.12)
+  border-radius: 5px
+  padding: 0 2px
+
+
+.toggle span
+  height: 4px
+  width: 30px
+  background-color: #1ca998
+  -webkit-transition: background-color 0.2s ease-out
+  transition: background-color 0.2s ease-out
+  position: relative
+  font-size: 0
+  margin: auto
+
+.toggle span:before, .toggle span:after
+  content: ""
+  position: absolute
+  width: 100%
+  height: 100%
+  background-color: #1ca998
+  -webkit-transition: -webkit-transform .2s ease-out
+  transition: -webkit-transform .2s ease-out
+  transition: transform .2s ease-out
+  transition: transform .2s ease-out, -webkit-transform .2s ease-out
+
+.toggle span:before
+  bottom: calc(100% + 5px)
+
+.toggle span:after
+  top: calc(100% + 5px)
+
+.toggle.close-button span { background-color: transparent; }
+
+.toggle.close-button  span:before
+  bottom: auto
+  -webkit-transform: rotate(45deg)
+  transform: rotate(45deg)
+  background-color: #1ca998
+  height: 4px
+
+
+.toggle.close-button  span:after
+  top: auto
+  -webkit-transform: rotate(-45deg)
+  transform: rotate(-45deg)
+  background-color: #1ca998
+  height: 4px
+
+////////////////////
+
+
+
+
+// *** Header *** //
+
+
+.header-content
+  background: rgb(35, 49, 60);
+  background: -moz-linear-gradient(90deg, rgb(35, 49, 60) 45%, rgb(48, 74, 95) 98%);
+  background: -webkit-linear-gradient(90deg, rgb(35, 49, 60) 45%, rgb(48, 74, 95) 98%);
+  background: -o-linear-gradient(90deg, rgb(35, 49, 60) 45%, rgb(48, 74, 95) 98%);
+  background: -ms-linear-gradient(90deg, rgb(35, 49, 60) 45%, rgb(48, 74, 95) 98%);
+  background: linear-gradient(180deg, rgb(35, 49, 60) 45%, rgb(48, 74, 95) 98%);
+  width: 100%
+  height: 500px
+  padding-top: 70px
+  padding-bottom: 70px
+  overflow: hidden
+  position: relative
+
+.mountains
+  background: url(../img/mountains.svg)
+  position: absolute
+  width: 1340px
+  height: 325px
+  display: block
+  left: 14%
+  bottom: 12%
+  z-index: 2
+  background-size: 100% 100%
+
+.small-mountain1
+  background: url(../img/small-mountain1.svg)
+  position: absolute
+  width: 1340px
+  height: 325px
+  display: block
+  left: -12%
+  bottom: -19%
+  z-index: 3
+  background-size: 100% 100%
+
+.small-mountain2
+  background: url(../img/small-mountain2.svg)
+  position: absolute
+  width: 1540px
+  height: 325px
+  display: block
+  left: 18%
+  bottom: -19%
+  z-index: 4
+  background-size: 100% 100%
+
+
+
+a.logo
+  font-size: 24px
+  color: #1ca998
+  border: 3px solid #1ca998
+  padding: 4px 7px 12px
+  font-weight: 700
+  margin: 0
+  font-family: 'Montserrat'
+
+.logo-nav
+  display: flex
+  justify-content: space-between
+  margin-bottom: 145px
+  align-items: center
+
+.logo-nav-small
+  display: none
+  margin-bottom: 20px
+
+
+.wrapper-nav
+  overflow: hidden
+  display: flex
+  align-items: center
+  height: 55px
+
+.header-nav
+  display: flex
+  align-items: center
+  transform: translateY(-40px)
+  transition: 0.3s all
+  margin-right: 20px
+  padding: 0 10px
+
+  a
+    font-size: 14px
+    color: white
+    padding-top: 15px
+    margin: 0 15px
+    transition: 0.3s all
+    border-bottom: 2px solid rgba(0,0,0,0)
+    line-height: 10px
+    &:hover
+      border-bottom: 2px solid #1ca998
+      transition: 0.3s all
+      color: white !important
+
+.show-nav
+  transform: translateY(0)
+  transition: 0.3s all
+
+.header-nav-small
+  padding: 10px 0
+  opacity: 0
+  transition: 0.3s all
+  display: none
+  justify-content: flex-start
+  margin: 10px 0
+
+  li
+    z-index: 9999999999999999
+
+  a
+    font-weight: 400
+    color: white
+    font-size: 14px
+    padding: 0 15px 0 0
+    margin-left: 0
+
+.show-nav-small
+  transition: 0.3s all
+  margin-top: 0
+  opacity: 1
+
+
+.text-header
+  max-width: 90% !important
+  padding-bottom: 30px !important
+  z-index: 2
+  display: flex
+  flex-direction: column
+  position: relative
+  text-align: center
+  //text-shadow: 0 3px rgba(0,0,0,0.3)
+
+  span
+    font-size: 48px
+    line-height: 72px
+    color: #1ca998
+
+  span.span1-header
+    font-weight: 100
+
+  span.span2-header
+    font-weight: 700
+
+.button-header-box
+  z-index: 9999999
+  position: relative
+  margin: auto
+  align-items: center !important
+  bottom: 20px
+  height: 48px
+  display: flex
+  width: 300px
+  justify-content: space-between
+
+.button-header
+  background-color: #12191f
+  padding: 15px 22px
+  border-radius: 35px
+  display: flex
+  align-items: center
+  color: #1ca998
+  border: 3px solid #12191f
+
+  &:hover
+    color: #12191f !important
+    background: #1ca998
+    border-color: #1ca998
+
+.button-header2
+  padding: 15px 22px
+  border-radius: 35px
+  display: flex
+  align-items: center
+  color: #12191f
+  border: 3px solid #1ca998
+  color: #1ca998
+
+  &:hover
+    color: #12191f !important
+    background-color: #1ca998
+
+
+
+
+// *** About *** //
+
+
+
+.content-about
+  background:  white
+  padding: 70px 0 100px 0
+  margin: auto
+  position: relative
+  width: 100%
+  overflow: hidden
+
+  p
+    line-height: 30px
+    padding: 85px 0 10px
+    color: #414141 !important
+    border-top: 2px solid #e9e8e8
+    margin-top: 15px
+    font-size: 18px
+
+  p:nth-child(4)
+    border: none
+    padding: 0
+
+.skills-box
+  display: flex
+  width: 100%
+  flex-direction: column
+  overflow: hidden
+  margin: auto
+  //background-color: #eeeeee
+  //border: 2px solid #e4e4e4
+  border-radius: 5px
+
+.row
+  display: flex
+  align-items: center
+  padding: 10px 0
+  justify-content: space-between
+
+  span
+    font-size: 12px
+    text-transform: uppercase
+    color: #838383
+
+.icons
+  display: flex
+  flex-wrap: wrap
+
+
+.icon
+  width: 58px
+  height: 48px
+  margin: 0 4px 4px 0
+  border-radius: 10px
+  display: flex
+  align-items: center !important
+  transition: 0.3s all
+  cursor: default
+  border: 4px solid #dee2e6
+  background-color: #e9edf0
+
+span.icon-big
+  font-size: 24px
+  font-weight: 700
+  color: #a7b1b9
+  margin: auto
+
+span.icon-small
+  font-size: 12px
+  font-weight: 700
+  color: #a7b1b9
+  text-transform: uppercase
+  margin: auto
+
+.row .icon:nth-child(1):hover
+  background: #7282a1
+  border: 4px solid #536689
+  span
+    color: white
+
+.row .icon:nth-child(2):hover
+  background: #edb98b
+  border: 4px solid #e1b085
+  span
+    color: white
+
+.row .icon:nth-child(3):hover
+  background: #e26d6d
+  border: 4px solid #bd5858
+  span
+    color: white
+
+.row .icon:nth-child(4):hover
+  background: #74b8d1
+  border: 4px solid #5ba3be
+  span
+    color: white
+
+.row .icon:nth-child(5):hover
+  background: #d5cb59
+  border: 4px solid #beb338
+  span
+    color: white
+
+
+
+
+
+
+
+// *** Projects *** //
+
+
+.content-projects
+  background-color: #2e373f
+  width: 100%
+  padding: 70px 0 70px 0
+  height: 100%
+  position: relative
+  overflow: hidden
+
+  h1
+    margin-bottom: 0
+    font-size: 48px
+
+  p
+    font-size: 18px !important
+    margin-top: 5px
+
+.content-wrapper-projects
+  width: 1000px
+  margin: auto !important
+  height: 100%
+  position: relative
+
+.section-title
+  display: flex
+  align-items: center
+  flex-direction: column
+
+
+.cbp-fwslider a
+  height: 100%
+
+.content-projects
+  h1, h2, h3, p
+    color: white
+    font-weight: 100
+    text-transform: none
+
+a.live-preview
+  color: white
+  font-size: 16px
+  font-weight: 400
+  border: 3px solid white
+  padding: 15px 10px
+  width: 140px
+  margin: 10px auto
+  border-radius: 35px
+  &:hover
+    background-color: white
+    color: #323232 !important
+
+
+// *** Footer *** //
+
+.content-wrapper-footer
+  width: 1000px
+  margin: auto
+  position: relative
+
+.right a
+  font-size: 48px
+  text-transform: lowercase !important
+
+
+.footer-content
+  background-color: #b95549
+  padding: 70px 0 0 0
+
+.footer-content-main
+  display: flex
+  justify-content: space-between
+  margin-top: 10px
+  border-top: 2px solid #c25f53
+  padding: 75px 0 70px
+  //background-color: #b04f44
+  width: 100%
+
+.left
+  width: 440px
+
+p.footer-text
+  font-size: 18px
+  font-weight: 300
+  color: white
+  line-height: 15px
+a.footer-mail
+  color: white
+  font-size: 14px
+  font-weight: 100
+  border: 2px solid white
+  padding: 15px 8px
+  width: 150px
+  margin: 10px auto
+  text-align: center
+
+  &:hover
+    background-color: white
+    color: #924a45 !important
+.right
+  li
+    display: inline-block
+  a, svg
+    display: block
+  a
+    position: relative // IE8
+    height: 30px // IE8
+    height: 3rem
+    width: 30px // IE8
+    width: 3rem
+    border-radius: 10px
+  svg
+    height: 100%
+    width: 100%
+  // IE8:
+  em
+    font-size: 14px
+    line-height: 1.5
+    margin-top: -.75em
+    position: absolute
+    text-align: center
+    top: 50%
+    right: 0
+    bottom: 0
+    left: 0
+
+@for $i from 1 through 30
+  .icon-#{$i}
+    color: hsl($i * 12, 70, 50) // IE8
+    fill: white
+    &:hover
+      fill: white
+      background: #9f483e
+
+
+// *** Preloader *** //
+
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: #1d2932
+  z-index: 999999999999999999999999 !important
+  display: flex
+  align-items: center
+  /* makes sure it stays on top
+
+.spinner1
+  width: 30px
+  height: 30px
+  position: relative
+  margin: auto
+
+.double-bounce1
+  width: 100%
+  height: 100%
+  border-radius: 50%
+  background-color: #1ca998
+  opacity: 0.6
+  position: absolute
+  top: 0
+  left: 5px
+  -webkit-animation: bounce 2.0s infinite ease-in-out
+  animation: bounce 2.0s infinite ease-in-out
+
+.double-bounce2
+  width: 100%
+  height: 100%
+  border-radius: 50%
+  background-color: #1ca998
+  opacity: 0.6
+  position: absolute
+  top: 0
+  right: 5px
+  -webkit-animation: bounce 2.0s infinite ease-in-out
+  animation: bounce 2.0s infinite ease-in-out
+  -webkit-animation-delay: -1.0s
+  animation-delay: -1.0s
+
+@-webkit-keyframes bounce
+  0%, 100%
+    -webkit-transform: scale(0)
+
+  50%
+    -webkit-transform: scale(1)
+
+
+@keyframes bounce
+  0%, 100%
+    transform: scale(0)
+    -webkit-transform: scale(0)
+
+  50%
+    transform: scale(1)
+    -webkit-transform: scale(1)

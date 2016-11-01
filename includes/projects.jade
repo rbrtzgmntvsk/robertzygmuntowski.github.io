@@ -1,0 +1,53 @@
+#works.content-projects
+  .content-wrapper-projects
+    .section-title
+      span.title-projects My projects
+      
+  
+      
+    #cbp-fwslider.cbp-fwslider
+      ul
+        li
+          a(href='../projekty/pigwood/index.html' target="_blank")
+            img(src='img/pigwood.png', alt='img03')
+            h2 Pigwood
+            p(style='font-size: 14px') Best cooking recipes.
+            a(href='../projekty/pigwood/index.html' target="_blank").live-preview Live preview 
+        li
+          a(href='../projekty/wishtek/index.html' target="_blank")
+            img(src='img/wishtek.png', alt='img01')
+            h2 Wishtek
+            p(style='font-size: 14px') Because resellers s**ks.
+            a(href='../projekty/wishtek/index.html' target="_blank").live-preview Live preview 
+        li
+          a(href='../projekty/socialbluff/index.html' target="_blank")
+            img(src='img/socialbluff.png', alt='img02')
+            h2 SocialBluff
+            p(style='font-size: 14px') They have no idea what they're doing.
+            a(href='../projekty/socialbluff/index.html' target="_blank").live-preview Live preview 
+          
+          
+          
+          
+      script(src='js/jquery.cbpFWSlider.min.js')
+      script.
+        $( function() {
+        /*
+        - how to call the plugin:
+        $( selector ).cbpFWSlider( [options] );
+        - options:
+        {
+        // default transition speed (ms)
+        speed : 500,
+        // default transition easing
+        easing : 'ease'
+        }
+        - destroy:
+        $( selector ).cbpFWSlider( 'destroy' );
+        */
+        $( '#cbp-fwslider' ).cbpFWSlider();
+        } );
+    
+
+      
+        

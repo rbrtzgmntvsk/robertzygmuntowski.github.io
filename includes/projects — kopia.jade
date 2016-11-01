@@ -1,0 +1,59 @@
+#works.content-projects
+  .content-wrapper-projects
+    .section-title
+      span.title-projects Projects
+      
+  
+      
+    #cbp-fwslider.cbp-fwslider
+      ul
+        li
+          a(href='../projekty/wishtek/index.html' target="_blank")
+            img(src='img/wishtek.png', alt='img01')
+            h2 Wishtek
+            p(style='font-size: 14px') Because resellers sucks.
+            a(href='../projekty/wishtek/index.html' target="_blank").live-preview Live preview 
+        li
+          a(href='../projekty/socialbluff/index.html' target="_blank")
+            img(src='img/socialbluff.png', alt='img02')
+            h2 SocialBluff
+            p(style='font-size: 14px') They have no idea what they're doing.
+            a(href='../projekty/socialbluff/index.html' target="_blank").live-preview Live preview 
+        li
+          a(href='../projekty/pigwood/index.html' target="_blank")
+            img(src='img/pigwood.png', alt='img03')
+            h2 Pigwood
+            p(style='font-size: 14px') Best cooking recipes.
+            a(href='../projekty/pigwood/index.html' target="_blank").live-preview Live preview 
+        li
+          a(href='')
+            img(src='img/griner.png', alt='img04', style='opacity: 0.3')
+            h2 Griner
+            p(style='font-size: 14px') Freebies or something like that.
+            a(href='').live-preview Coming soon
+          
+          
+          
+          
+      script(src='js/jquery.cbpFWSlider.min.js')
+      script.
+        $( function() {
+        /*
+        - how to call the plugin:
+        $( selector ).cbpFWSlider( [options] );
+        - options:
+        {
+        // default transition speed (ms)
+        speed : 500,
+        // default transition easing
+        easing : 'ease'
+        }
+        - destroy:
+        $( selector ).cbpFWSlider( 'destroy' );
+        */
+        $( '#cbp-fwslider' ).cbpFWSlider();
+        } );
+    
+
+      
+        

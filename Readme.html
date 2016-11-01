@@ -1,0 +1,171 @@
+<h1 id="image-slider-with-swipe">Image Slider With Swipe</h1>
+<h2 id="about">About</h2>
+<p>This is a tiny jQuery plugin that represents image slider (carousel). Slider supports mouse and touch inputs to slide through images. Also the slider supports HTML content.</p>
+<p><img src="http://alexemashev.github.io/swipeslider/img/small_demo.gif" alt="Demo picture"></p>
+<p><a href="http://alexemashev.github.io/swipeslider/">Demo page</a></p>
+<h2 id="features">Features</h2>
+<ul>
+<li>mouse and touch (swipe) support;</li>
+<li>next, previous buttons;</li>
+<li>bullets to change current slide;</li>
+<li>can work with images as well as HTML;</li>
+<li>various options (animation effect, timings, enable, disable certain properties);</li>
+<li>using css transition to change slides (so it should be video accelerated);</li>
+<li>responsiveness, can take up available space and shrink images to fit slider if needed;</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="installation-using-bower">Installation Using Bower</h3>
+<p>Use following command:
+<code>bower install swipeslider</code>
+or
+<code>bower install swipeslider --save</code>
+to save to your project as dependency.</p>
+<h3 id="manual-installation">Manual Installation</h3>
+<p>Add these two files to your page:
+<a href="http://alexemashev.github.io/swipeslider/dist/swipeslider.min.js">swipeslider.min.js</a>
+<a href="http://alexemashev.github.io/swipeslider/dist/swipeslider.css">swipeslider.css</a></p>
+<p>You&#39;ll also need to add <a href="http://jquery.com/">jQuery</a> library if it&#39;s not already.</p>
+<p>Within your HTML add markup for slides, something like that:</p>
+<pre><code class="lang-HTML">&lt;figure id=&quot;sample_slider&quot; class=&quot;swipeslider&quot;&gt;
+&lt;ul class=&quot;sw-slides&quot;&gt;
+  &lt;li class=&quot;sw-slide&quot;&gt;
+    &lt;img src=&quot;img/lang_yie_ar_kung_fu.jpg&quot; alt=&quot;Lang from Yie Ar Kung Fu&quot;&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;sw-slide&quot;&gt;
+    &lt;img src=&quot;img/summer_beach.jpg&quot; alt=&quot;Summer beach concept&quot;&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;sw-slide&quot;&gt;
+    &lt;img src=&quot;img/borderlands_tiny_tina.jpg&quot; alt=&quot;Tiny Tina from Borderlands 2&quot;&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;sw-slide&quot;&gt;
+    &lt;img src=&quot;img/redhead.jpg&quot; alt=&quot;Redhead girl&quot;&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Add following script to make things going:</p>
+<pre><code class="lang-JavaScript">&lt;script&gt;
+$(window).load(function() {
+  $(&#39;#sample_slider&#39;).swipeslider();
+});
+&lt;/script&gt;
+</code></pre>
+<p>Do not forget to add at least height to your slider via css.</p>
+<h2 id="how-to-customize">How To Customize</h2>
+<h3 id="plugin-settings">Plugin Settings</h3>
+<p>Plugin can be customized via JavaScript object. For example:</p>
+<pre><code class="lang-JavaScript">$(&#39;#sample_slider&#39;).swipeslider({autoPlay: false, swipe: false});
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sliderHeight</td>
+<td>&#39;60%&#39;</td>
+<td>Height of the slider block. Set in percents if you want automatic resizing according to width of slider (useful is you need a responsiveness). Set it in pixels it you want to have constant height.</td>
+</tr>
+<tr>
+<td>transitionDuration</td>
+<td>500</td>
+<td>Duration of transition effect between slides (in msec.)</td>
+</tr>
+<tr>
+<td>timingFunction</td>
+<td>&#39;ease-out&#39;</td>
+<td>Easing function that will be used in transition effect (CSS easing function).</td>
+</tr>
+<tr>
+<td>autoPlay</td>
+<td>true</td>
+<td>Enable automatic transition between slides.</td>
+</tr>
+<tr>
+<td>autoPlayTimeout</td>
+<td>3000</td>
+<td>Delay (msec.) between slide transition when autoPlay is true.</td>
+</tr>
+<tr>
+<td>prevNextButtons</td>
+<td>true</td>
+<td>Show next and previous slide buttons.</td>
+</tr>
+<tr>
+<td>bullets</td>
+<td>true</td>
+<td>Show bullets that indicate which slide is active and used to quick switching between slides.</td>
+</tr>
+<tr>
+<td>swipe</td>
+<td>true</td>
+<td>Enable swipe function to switch between slides.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="style">Style</h3>
+<p>The interface can be customized by overriding attributes of CSS classes. <em>SCSS file included.</em></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.swipslider</td>
+<td>Block that contains slider itself.</td>
+</tr>
+<tr>
+<td>.sw-slides</td>
+<td>Block that contains slides.</td>
+</tr>
+<tr>
+<td>.sw-slide</td>
+<td>Slide block, can contain either block with content or img element.</td>
+</tr>
+<tr>
+<td>.sw-slide &gt; img</td>
+<td>Image of slide.</td>
+</tr>
+<tr>
+<td>.sw-content</td>
+<td>Block that can be used instead of img element and can contain other HTML elements. It can be used as a slide with content.</td>
+</tr>
+<tr>
+<td>.sw-next-prev</td>
+<td>Overall style of previous and next button.</td>
+</tr>
+<tr>
+<td>.sw-prev</td>
+<td>Style for previous button (to override the content use ::after pseudo element).</td>
+</tr>
+<tr>
+<td>.sw-next</td>
+<td>Style for next button (to override the content use ::after pseudo element).</td>
+</tr>
+<tr>
+<td>.sw-bullet</td>
+<td>Bullets container.</td>
+</tr>
+<tr>
+<td>.sw-bullet li</td>
+<td>Single bullet</td>
+</tr>
+<tr>
+<td>.sw-bullet li.active</td>
+<td>Active bullet</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li>jQuery;</li>
+</ul>
+<h2 id="license">License</h2>
+<p>The MIT public license.</p>
